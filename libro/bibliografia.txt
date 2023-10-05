@@ -1,0 +1,2 @@
+-Scott Chacon and Ben Straub .ProGit.Apress
+-Loeliger, J and McCullugh. Nueva version de git o'Relly

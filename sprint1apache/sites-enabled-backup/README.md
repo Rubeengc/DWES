@@ -1,2 +1,2 @@
-Este directorio contiene configuracion de los virtualhost
+Estos archivos contienen backups
 
