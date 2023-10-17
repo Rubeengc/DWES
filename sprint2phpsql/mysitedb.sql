@@ -74,7 +74,7 @@ CREATE TABLE `tPeliculas` (
 LOCK TABLES `tPeliculas` WRITE;
 /*!40000 ALTER TABLE `tPeliculas` DISABLE KEYS */;
 INSERT INTO `tPeliculas` VALUES
-(1,'Interestellar','https://assets-inbmscdn.com/discovery-catalog/events/et00019066-rmnrkekskw-landscape.jpg','2:53','Ciencia Ficcion'),
+(1,'Interestellar','https://assets-in.bmscdn.com/discovery-catalog/events/et00019066-rmnrkekskw-landscape.jpg','2:53','Ciencia Ficcion'),
 (2,'The Martian','https://es.web.img3.acsta.net/pictures/15/08/27/13/26/081921.jpg','2:34','Ciencia Ficcion'),
 (3,'Saw','https://es.web.img3.acsta.net/medias/nmedia/18/89/75/36/20065254.jpg','1:54','Terror'),
 (4,'El padrino','https://es.web.img3.acsta.net/pictures/18/06/12/12/12/0117051.jpg?coixp=49&coiyp=27','1:45','Mafia'),
