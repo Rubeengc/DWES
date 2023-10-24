@@ -13,14 +13,13 @@
 	$only_row = mysqli_fetch_array($result);
 	echo '<h1>'.$only_row['nombre'].'</h1>';
 	echo '<h2>'.$only_row['duracion'].'</h2>';
-	echo '<img src='.$row['url_imagen'].'></img>';
+	echo '<img src="'.$only_row['url_imagen'].'"width=600 height=600 ></img>';
     ?>
     <h3>Comentarios:</h3>
 	<ul>
 	  <?php
-		$query2 = 'SELECT * FROM tComentarios WHERE pelicula_id='.$pelicula_id;
-		$result2 =mysqli_query($db,$query2) or die ('Query error');
-
+		$query2 = 'SELECT * FROM tComentarios WHERE peliculas_id='.$pelicula_id;
+		echo $result2 = mysqli_query($db,$query2) or die ('Query error');
 		while ($row = mysqli_fetch_array($result2)){
 		 echo '<li>'.$row['comentario'].'</li>';
 
@@ -28,5 +27,11 @@
 		mysqli_close($db);
 	   ?>
   </ul>
+<p>Deja un comentario nuevo:</p>
+<form action="/comment.php" method="post">
+	<textarea rows="4" cols="50" name="new_comment"></textarea><br>
+	<input type="hidden" name="pelicula_id" value= <?php echo $pelicula_id; ?> >
+	<input type="submit" value="Comentar">
+</form>
  </body>
 </html>
