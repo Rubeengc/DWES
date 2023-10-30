@@ -1,16 +1,51 @@
 def adivinanza():
-    print("Adivinanza: Tengo hojas pero no soy un libro, me mueve el viento pero no soy una bandera. ¿Qué soy?")
-    print("a) Un árbol")
-    print("b) Un puro")
-    print("c) Un ordenador")
+    puntuacion = 0
 
-    respuesta_correcta = "a"  
+    adivinanzas = {
+        1: {
+            "pregunta": "Tengo hojas pero no soy un libro, me mueve el viento pero no soy una bandera. ¿Qué soy?",
+            "opciones": {
+                "a": "Un árbol",
+                "b": "Un puro",
+                "c": "Un ordenador",
+            },
+            "respuesta_correcta": "a",
+        },
+        2: {
+            "pregunta": "Soy redondo, a veces grande y a veces pequeño, y me usan para jugar en equipos. ¿Qué soy?",
+            "opciones": {
+                "a": "Una pizza",
+                "b": "Un balón",
+                "c": "Un reloj de arena",
+            },
+            "respuesta_correcta": "b",
+        },
+        3: {
+            "pregunta": "Tengo teclas pero no puedo tocar música, tengo letras pero no puedo leer. ¿Qué soy?",
+            "opciones": {
+                "a": "Una calculadora",
+                "b": "Un piano",
+                "c": "Un teléfono",
+            },
+            "respuesta_correcta": "c",
+        },
+    }
 
-    respuesta_usuario = input("Ingresa tu respuesta (a, b, o c): ").lower() 
-    if respuesta_usuario == respuesta_correcta:
-        print("¡Correcto! La respuesta es correcta. Eres un experto en adivinanzas.")
-    else:
-        print("Respuesta incorrecta. La respuesta correcta es '" + respuesta_correcta + "'.")
+    for numero, adivinanza in adivinanzas.items():
+        print(f"Adivinanza {numero}: {adivinanza['pregunta']}")
+        for opcion, respuesta in adivinanza['opciones'].items():
+            print(f"{opcion}) {respuesta}")
+
+        respuesta_usuario = input("Ingresa tu respuesta (a, b, o c): ").lower()
+
+        if respuesta_usuario == adivinanza['respuesta_correcta']:
+            print("¡Correcto! La respuesta es correcta. Sumas 10 puntos.")
+            puntuacion += 10
+        else:
+            print(f"Respuesta incorrecta. La respuesta correcta es '{adivinanza['respuesta_correcta']}'. Restas 5 puntos.")
+            puntuacion -= 5
+
+    print(f"\nPuntuación total: {puntuacion} puntos")
 
 if __name__ == "__main__":
     adivinanza()
