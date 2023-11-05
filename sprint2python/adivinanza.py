@@ -1,3 +1,5 @@
+import random
+
 def adivinanza():
     puntuacion = 0
 
@@ -31,8 +33,10 @@ def adivinanza():
         },
     }
 
-    for numero, adivinanza in adivinanzas.items():
-        print(f"Adivinanza {numero}: {adivinanza['pregunta']}")
+    adivinanzas_seleccionadas = random.sample(list(adivinanzas.values()), 2)
+
+    for adivinanza in adivinanzas_seleccionadas:
+        print(f"Adivinanza: {adivinanza['pregunta']}")
         for opcion, respuesta in adivinanza['opciones'].items():
             print(f"{opcion}) {respuesta}")
 
@@ -45,7 +49,7 @@ def adivinanza():
             print(f"Respuesta incorrecta. La respuesta correcta es '{adivinanza['respuesta_correcta']}'. Restas 5 puntos.")
             puntuacion -= 5
 
-    print(f"\nPuntuación total: {puntuacion} puntos")
+    print("\nPuntuación total: " + str(puntuacion) + " puntos")
 
 if __name__ == "__main__":
     adivinanza()
