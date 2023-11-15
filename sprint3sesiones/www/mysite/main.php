@@ -35,8 +35,10 @@ background-color: #FFF4E1;
 		echo $row[4];
 		echo '<br>';
 		echo '<a href ="/detail.php?peliculas_id='.$row['id'].'">Detalles</a><br>';
- 		echo '<hr>';
+ 	
+		echo '<hr>';
 		}
+		echo '<a href="/logout.php">Logout</a>';
 		mysqli_close($db);
 		?>
 		
