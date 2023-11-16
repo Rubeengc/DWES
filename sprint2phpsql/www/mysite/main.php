@@ -37,7 +37,8 @@ background-color: #FFF4E1
 	echo '<a href ="/detail.php?id='.$row['id'].'">Detalles</a><br>';
  		echo '<hr>';
 		}
-		?>
 		mysqli_close($db);
+		?>
+		
 	</body>
 </html>

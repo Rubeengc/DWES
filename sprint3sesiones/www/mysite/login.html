@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("login_form").addEventListener('submit', validateForm);
+        });
+
+        function validateForm(event) {
+            event.preventDefault();
+            let email = document.getElementById('email').value;
+            if (email.length == 0) {
+                alert('Introduce un correo');
+                return;
+            }
+            let password = document.getElementById('password').value;
+            if (password.length == 0) {
+                alert('Introduce una contrasena');
+                return;
+            }
+            this.submit();
+        }
+    </script>
 </head>
 <body>
     <h2>Iniciar Sesión</h2>
