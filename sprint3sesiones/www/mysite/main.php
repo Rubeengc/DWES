@@ -3,18 +3,33 @@
 ?>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&family=Raleway:ital,wght@0,400;1,100&family=Russo+One&display=swap" rel="stylesheet">
+
 <style>
 	h1{
-	text-align: center ;
+		font-family: 'Russo One', sans-serif;
+	}
+	img {
+	
+	text-align:center;
+	opacity: 0; /* Inicialmente, establecer la opacidad a 0 para la animación */
+	transition: opacity 0.5s ease; /* Definir la transición de la opacidad */
+	
+        }
 
-	};	
-	img{
-	text-align: center ;
-	display: block ;
-	};
-body{
-background-color: #FFF4E1;
-}
+	img:hover {
+		opacity: 1; /* Cambiar la opacidad a 1 al hacer hover */
+	}
+
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        hr {
+            width: 50%;
+            margin: auto;
+        }
 
 
 
