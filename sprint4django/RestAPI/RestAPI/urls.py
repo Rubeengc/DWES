@@ -20,4 +20,5 @@ from webserviceapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('peliculas',views.devolver_peliculas),
+    path('peliculas/<int:id_solicitado>',views.devolver_peliculas_por_id),
 ]
